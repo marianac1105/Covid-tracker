@@ -14,7 +14,7 @@ export default function Chart () {
           setDailyData(await fetchDailyData());
       }
       fetchAPI();
-      console.log(dailyData)
+      
           
       })
 
@@ -31,21 +31,21 @@ export default function Chart () {
       label: "Infected",
       data: dailyData.map(({confirmed}) => confirmed ),
       fill: true,
-      backgroundColor: '#056674',
+      backgroundColor: "rgb(5, 101, 116, 0.2)",
       borderColor: '#056674',
     },
     {
       label: "Recovered",
       data: dailyData.map(({recovered}) => recovered ),
       fill: true,
-      backgroundColor: '#66bfbf',
+      backgroundColor: 'rgb(102, 191, 191, 0.2)',
       borderColor: '#66bfbf',
     },
     {
       label: "Deaths",
       data: dailyData.map(({deaths}) => deaths ),
       fill: true,
-      backgroundColor: '#ff4b5c',
+      backgroundColor: 'rgb(255, 75, 92, 0.2)',
       borderColor: '#ff4b5c',
     },
   ],

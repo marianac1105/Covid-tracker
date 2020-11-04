@@ -30,4 +30,13 @@ export async function fetchData() {
       console.error(error);
     }
   }
+
+  export async function fetchCoutryData() {
+    try {
+      const {data: { countries}} = await axios.get(url + "/countries");
+      return countries.map((country) => country.name)
+    } catch (error) {
+      console.error(error);
+    }
+  }
   

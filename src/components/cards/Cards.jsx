@@ -46,7 +46,7 @@ export default function Cards({
                 separator=","
               /></Typography>
             <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
-            <Typography variant="body2">Number of Recovered cases of Covid19</Typography>
+            <Typography variant="body2">Number of recovered cases of Covid19</Typography>
           </CardContent>
         </Grid>
         <Grid item component={Card} xs={12} md={3} className={cardStyle.deaths}>
@@ -61,7 +61,7 @@ export default function Cards({
                 separator=","
               /></Typography>
             <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
-            <Typography variant="body2">Numbers of deaths caused by Covid 19</Typography>
+            <Typography variant="body2">Number of deaths caused by Covid 19</Typography>
           </CardContent>
         </Grid>
       </Grid>
