@@ -6,7 +6,7 @@
 .infected {
   margin: 0 2% !important;
   border-bottom: 10px solid #056674;
-  display: flex;
+  
 
   
 }
@@ -14,10 +14,12 @@
 .recovered {
   margin: 0 2% !important;
   border-bottom: 10px solid #66bfbf;
+  
 }
 
 .deaths {
   margin: 0 2% !important;
   border-bottom: 10px solid #ff4b5c;
+  
 }
 
