@@ -1,9 +1,9 @@
 import React, {useState, useEffect } from "react"
 import {fetchDailyData} from "../../api"
-import {Line, Bar} from "react-chartjs-2"
+import {Line } from "react-chartjs-2"
 
 import ChartStyle from "./Chart.module.css"
-import { Container } from "@material-ui/core"
+
 
 export default function Chart () {
 
@@ -15,6 +15,7 @@ export default function Chart () {
       }
       fetchAPI();
       
+      
           
       })
 
@@ -22,7 +23,7 @@ export default function Chart () {
       
  
 
-  const lineChart = (dailyData.length? <Line
+  const lineChart = (dailyData? <Line
 
   data = {{
   labels: dailyData.map(({date}) => date),
@@ -33,13 +34,6 @@ export default function Chart () {
       fill: true,
       backgroundColor: "rgb(5, 101, 116, 0.2)",
       borderColor: '#056674',
-    },
-    {
-      label: "Recovered",
-      data: dailyData.map(({recovered}) => recovered ),
-      fill: true,
-      backgroundColor: 'rgb(102, 191, 191, 0.2)',
-      borderColor: '#66bfbf',
     },
     {
       label: "Deaths",
