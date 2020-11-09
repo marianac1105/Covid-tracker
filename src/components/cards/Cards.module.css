@@ -3,8 +3,13 @@
   display: flex;
 }
 
+.card {
+margin: 0 2% !important;
+
+}
+
 .infected {
-  margin: 0 2% !important;
+  
   border-bottom: 10px solid #056674;
   
 
@@ -12,14 +17,21 @@
 }
 
 .recovered {
-  margin: 0 2% !important;
+  
   border-bottom: 10px solid #66bfbf;
   
 }
 
 .deaths {
-  margin: 0 2% !important;
-  border-bottom: 10px solid #ff4b5c;
+ 
+  border-bottom: 10px solid rgb(255, 75, 92);
   
+}
+
+@media(max-width: 959px){
+  .card {
+    margin: 2% 0 !important;
+  }
+
 }
 

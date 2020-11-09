@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardContent, Typography, Grid } from "@material-ui/core";
 import cardStyle from "./Cards.module.css";
 import CountUp from "react-countup";
+import cx from 'classnames';
 
 
 export default function Cards({
@@ -17,7 +18,7 @@ export default function Cards({
   return (
     <div className={cardStyle.container}>
       <Grid container spacing={3} justify="center">
-        <Grid item component={Card} xs={12} md={3}  className={cardStyle.infected}>
+        <Grid item component={Card} xs={12} md={3}  className={cx(cardStyle.infected, cardStyle.card)}>
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
               Infected
@@ -34,7 +35,7 @@ export default function Cards({
             <Typography variant="body2">Number of active cases of covid19</Typography>
           </CardContent>
         </Grid>
-        <Grid item component={Card} xs={12} md={3} className={cardStyle.recovered}>
+        <Grid item component={Card} xs={12} md={3} className={cx(cardStyle.recovered, cardStyle.card)}>
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
               Recovered
@@ -49,7 +50,7 @@ export default function Cards({
             <Typography variant="body2">Number of recovered cases of Covid19</Typography>
           </CardContent>
         </Grid>
-        <Grid item component={Card} xs={12} md={3} className={cardStyle.deaths}>
+        <Grid item component={Card} xs={12} md={3} className={cx(cardStyle.deaths, cardStyle.card)}>
           <CardContent>
             <Typography color="textSecondary" gutterBottom>
               Deaths

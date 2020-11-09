@@ -4,6 +4,7 @@ import Chart from "./components/chart/Chart";
 import CountryPicker from "./components/CountryPicker/CountryPicker";
 import appStyle from "./App.module.css";
 import { fetchData } from "./api";
+import CovidImage from "./images/covid19.png"
 
 function App() {
   const [data, setData] = useState({});
@@ -14,25 +15,24 @@ function App() {
       setData(await fetchData(country));
     };
     fetchAPI();
-    
-    
-    
   }, [country]);
 
-  const countryHandler  = (countryText) => {
-   setCountry(countryText)
-      
-  }
+  const countryHandler = (countryText) => {
+    if(countryText === "Global"){
+      setCountry("")
+    } else { setCountry(countryText)}
+
+    
+  };
 
   return (
     <div className={appStyle.container}>
-      <Cards data={data} />
+    <img src={CovidImage} alt="Covid-19" className={appStyle.image}/>
 
-      <Chart />
-      <CountryPicker 
-      countryHandler = {countryHandler} 
-      
-      />
+      <Cards data={data} />
+      <CountryPicker countryHandler={countryHandler} />
+
+      <Chart data={data} country={country} />
     </div>
   );
 }
