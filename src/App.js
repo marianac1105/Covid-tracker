@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Cards from "./components/cards/Cards";
 import Chart from "./components/chart/Chart";
 import CountryPicker from "./components/CountryPicker/CountryPicker";
+import Footer from "./components/Footer/Footer"
 import appStyle from "./App.module.css";
 import { fetchData } from "./api";
 import CovidImage from "./images/covid19.png"
@@ -33,6 +34,9 @@ function App() {
       <CountryPicker countryHandler={countryHandler} />
 
       <Chart data={data} country={country} />
+      <div>
+        <Footer/>
+      </div>
     </div>
   );
 }
