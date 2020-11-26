@@ -32,7 +32,7 @@ export default function Cards({
               />
             </Typography>
             <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
-            <Typography variant="body2">Number of active cases of covid19</Typography>
+            <Typography variant="body2">Number of people infected by Covid19</Typography>
           </CardContent>
         </Grid>
         <Grid item component={Card} xs={12} md={3} className={cx(cardStyle.recovered, cardStyle.card)}>
@@ -47,7 +47,7 @@ export default function Cards({
                 separator=","
               /></Typography>
             <Typography color="textSecondary">{new Date(lastUpdate).toDateString()}</Typography>
-            <Typography variant="body2">Number of recovered cases of Covid19</Typography>
+            <Typography variant="body2">Number of people that has recovered from Covid19</Typography>
           </CardContent>
         </Grid>
         <Grid item component={Card} xs={12} md={3} className={cx(cardStyle.deaths, cardStyle.card)}>
